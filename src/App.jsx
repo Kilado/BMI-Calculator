@@ -54,7 +54,12 @@ function App() {
   };
 
   const reload = () => {
-    window.location.reload();
+    const confirmed = window.confirm(
+      "Are you sure you want to reload the page?",
+    );
+    if (confirmed) {
+      window.location.reload();
+    }
   };
 
   return (
